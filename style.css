@@ -6,7 +6,7 @@
   }
   
   body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', Times, serif;
     color: #333;
     line-height: 1.6;
   }
@@ -71,7 +71,7 @@
   }
   
   .gallery {
-    padding: 4rem 0;
+    padding: 3rem 0;
   }
   
   .gallery h2 {
@@ -80,13 +80,26 @@
     margin-bottom: 2rem;
   }
   
-  .grid {
-    display: grid;
+  .gallery .grid {
+    display: inline-block;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
   }
+
+  .gallery{
+    overflow-x: scroll;
+    white-space: nowrap;
+    transition: transform 0.3s ease-in-out;
+    overflow-x: hidden;
+  }
+
+  .gallery .grid-item{
+    display: inline-block;
+    width: 32%;
+    padding: 2px;
+  }
   
-  .grid-item img {
+  .gallery .grid-item img {
     width: 100%;
     height: auto;
     border-radius: 10px;
@@ -135,21 +148,124 @@
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.8;
+    text-align: justify;
   }
 
-  .quem-sou img{
+  .quem-sou .perfil img{
     border-radius: 50%;
     position: absolute;
     left: calc(50% - 160px);
+    max-width: 300px;
     top: -155px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.6s ease, box-shadow 0.3s ease;
   }
 
-  .quem-sou img:hover {
+  .quem-sou .perfil img:hover {
     transform: scale(1.05);
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .quem-sou .icones{
+    margin-top: 50px;
+  }
+
+  .quem-sou .icones img{
+    transition: transform 0.6s ease, box-shadow 0.3s ease;
+    height: 50px;
+    padding: 10px, 10px;
+  }
+
+  .quem-sou .icones img:nth-child(1){
+    padding-right: 15px;
+  }
+
+  .quem-sou .icones img:hover {
+    transform: scale(1.05);
   }
 
   .quem-sou .container{
     margin-top: 115px;
   }
+  
+  .cupom {
+    padding: 3rem 0;
+  }
+  
+  .cupom h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .coupon-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.coupon {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.coupon button {
+    background-color: #ff007f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.coupon button:hover {
+    background-color: #e60070;
+}
+/* Estilos do Popup */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.popup-content button {
+    margin-top: 15px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.popup-content button:hover {
+    background-color: #c82333;
+}
+
+#cupom-certo{
+  font-weight: 900;
+  color: #ff007f;
+}
+.popup-overlay p{
+  display: block;
+  padding: 10px 5px;
+}
+.popup-overlay a{
+  display: block;
+}

@@ -5,34 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cosmetificando - Beleza e Inspiração</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="hero">
     <div class="container">
       <h1 class="title">Cosmetificando</h1>
-      <p class="subtitle">Beleza, inspiração e confiança na sua rotina de cuidados.</p>
-      <a href="#gallery" class="cta-button">Explore Agora</a>
+      <p class="subtitle">Beleza e autocuidado com uma dose de ciência.</p>
+      <a href="#quem-sou" class="cta-button">Conheça mais</a>
     </div>
   </header>
 
   <section id="quem-sou" class="quem-sou">
-    <a href="https://www.instagram.com/cosmetificando/" target="_blank" class="instagram-link"><img src="imagens/eu.jpg" alt="Ana Beatriz"></a>
+    <a href="https://www.instagram.com/cosmetificando/" target="_blank" class="perfil"><img src="imagens/eu.jpg" alt="Ana Beatriz"></a>
     <div class="container">
-      <h2>Quem Eu Sou</h2>
+      <h2>O que é o Cosmetificando?</h2>
       <p>
-        Sou apaixonado(a) por cosméticos e pelo poder transformador da beleza. Aqui, compartilho dicas, produtos incríveis e inspirações para destacar o melhor de cada um.
+        O Cosmetificando nasceu em 2021, idealizado por Ana Gará, graduanda de Engenharia Química, com o objetivo de unir sua paixão por cosméticos ao conhecimento técnico adquirido na área. Após uma pausa estratégica na criação de conteúdo, o projeto retorna com força total em 2024, renovado e pronto para compartilhar experiências e informações de qualidade sobre o universo dos cosméticos.
       </p>
+      <div class="icones">
+        <a href="https://www.instagram.com/cosmetificando/"><img src="/imagens/instagram.png"></a>
+        <a href="https://www.tiktok.com/@ana.gara"><img src="/imagens/tiktok.png"></a>
+        <a href="mailto:cosmetificando@gmail.com"><img src="imagens/email.png"></a>
+      </div>
     </div>
   </section>
-
-  <!--<section id="about" class="about">
-    <div class="container">
-      <h2>Sobre Nós</h2>
-      <p>
-        A Cosmetificando é mais do que cosméticos: é um estilo de vida. Nossa missão é transformar sua rotina em momentos de cuidado e bem-estar. Siga-nos e inspire-se!
-      </p>
-    </div>
-  </section>  -->
 
   <section id="gallery" class="gallery">
     <div class="container">
@@ -49,11 +48,57 @@
     </div>
   </section>
 
+  <section id="cupom" class="cupom">
+    <h2>Nossos Cupons</h2>
+    <div class="coupon-list">
+      <div class="coupon">
+        <h3>Aura Beauty</h3>
+        <button onclick="showPopup('10% de desconto em produtos Aura Beauty!', 'https://aurabeautyclub.com.br/', 'AURACOSMETIFICANDO')">Ver mais</button>
+      </div>
+      <div class="coupon">
+        <h3>Braé</h3>
+        <button onclick="showPopup('10% de desconto em produtos Braé!', 'https://www.brae.com.br/', 'COSMETIFICANDO')">Ver mais</button>
+      </div>
+      <div class="coupon">
+          <h3>Creamy</h3>
+          <button onclick="showPopup('10% de desconto em produtos Creamy!', 'https:///creamy.com.br', 'COSMETIFICANDO')">Ver mais</button>
+      </div>
+      <div class="coupon">
+          <h3>Forever Liss</h3>
+          <button onclick="showPopup('10% de desconto em produtos Forever Liss!', 'https://www.foreverliss.com.br', 'FLCOSMETIFICANDO')">Ver mais</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popup -->
+  <div class="popup-overlay" id="popup">
+      <div class="popup-content">
+          <p id="popup-text"></p>
+          <span>CUPOM: </span>
+          <span id="cupom-certo"></span>
+          <a id="link" href="">Ir para o site!</a>
+          <button onclick="closePopup()">Fechar</button>
+      </div>
+  </div>
+
   <footer class="footer">
     <div class="container">
       <p>© 2024 Cosmetificando - Todos os direitos reservados</p>
       <a href="https://www.instagram.com/cosmetificando/" target="_blank" class="instagram-link">Siga-nos no Instagram</a>
     </div>
   </footer>
+
+  <script>
+    function showPopup(description, link, cupom) {
+        document.getElementById('popup-text').innerText = description;
+        document.getElementById('link').href = link;
+        document.getElementById('cupom-certo').innerText = cupom;
+        document.getElementById('popup').style.display = 'flex';
+    }
+
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+    }
+</script>
 </body>
 </html>
