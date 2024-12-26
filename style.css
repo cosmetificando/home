@@ -237,6 +237,17 @@
     justify-content: center;
     align-items: center;
 }
+
+.popup-content a{
+  color: #e60070;
+  text-decoration-color: white;
+}
+
+.popup-content a:hover{
+  text-decoration-color: #e60070;
+}
+
+
 .popup-content {
     background: #fff;
     padding: 20px;
