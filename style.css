@@ -296,3 +296,10 @@
 .popup-overlay a{
   display: block;
 }
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+}
