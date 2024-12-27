@@ -95,14 +95,14 @@
   .gallery .grid-item{
     display: inline-block;
     width: 32%;
-    padding: 2px;
+    padding: 0px;
   }
   .gallery::-webkit-scrollbar {
     height: 5px; /* Altura da barra de rolagem */
   }
 
   .gallery::-webkit-scrollbar-thumb {
-      background: #ccc; /* Cor do controle de rolagem */
+      background: #e60070; /* Cor do controle de rolagem */
       border-radius: 10px; /* Bordas arredondadas */
       transition: background 0.3s ease-in-out;
   }
