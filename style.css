@@ -87,7 +87,7 @@
   }
 
   .gallery{
-    overflow-x: auto;
+    overflow-x:scroll;
     white-space: nowrap;
     transition: transform 0.3s ease-in-out;
   }
