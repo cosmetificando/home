@@ -313,4 +313,7 @@
   .gallery h2 {
     font-size: 2rem;
   }
+  .gallery .grid-item{
+    width: 60%;
+  }
 }
