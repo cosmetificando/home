@@ -299,7 +299,18 @@
 
 @media (max-width: 768px) {
   .title {
+    font-size: 2.5rem;
+  }
+  .about h2 {
     font-size: 2rem;
-    margin-bottom: 1rem;
+  }
+  .quem-sou h2 {
+    font-size: 2rem;
+  }
+  .cupom h2 {
+    font-size: 2rem;
+  }
+  .gallery h2 {
+    font-size: 2rem;
   }
 }
