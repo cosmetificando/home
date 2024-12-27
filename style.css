@@ -86,7 +86,7 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
-  .gallery{
+  .gallery .grid{
     overflow-x:scroll;
     white-space: nowrap;
     transition: transform 0.3s ease-in-out;
@@ -97,11 +97,11 @@
     width: 32%;
     padding: 0px;
   }
-  .gallery::-webkit-scrollbar {
+  .gallery .grid::-webkit-scrollbar {
     height: 5px; /* Altura da barra de rolagem */
   }
 
-  .gallery::-webkit-scrollbar-thumb {
+  .gallery .grid::-webkit-scrollbar-thumb {
       background: #e60070; /* Cor do controle de rolagem */
       border-radius: 10px; /* Bordas arredondadas */
       transition: background 0.3s ease-in-out;
@@ -111,7 +111,7 @@
       background: #888; /* Cor ao passar o mouse */
   }
 
-  .gallery::-webkit-scrollbar-track {
+  .gallery .grid::-webkit-scrollbar-track {
       background: transparent; /* Fundo da barra de rolagem */
   }
   
